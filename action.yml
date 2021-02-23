@@ -1,0 +1,25 @@
+name: "Upload to Lokalise"
+description: "Upload file to lokalise"
+inputs:
+  lokalise-token: # id of input
+    description: "Your CLI/API token for Lokalise"
+    required: true
+  lokalise-project-id: # id of input
+    description: "Your project ID for Lokalise"
+    required: true
+  file-path: # id of input
+    description: "The path to the file you want to upload to lokalise"
+    required: true
+  lang-iso: # id of input
+    description: "The language code for the file you are uploading"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.who-to-greet }}.
+      shell: bash
+    - id: random-number-generator
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
+      shell: bash
+    - run: ${{ github.action_path }}/goodbye.sh
+      shell: bash
