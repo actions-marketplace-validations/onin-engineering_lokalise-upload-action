@@ -1,5 +1,7 @@
-name: "lokalise-upload-action"
+name: "Lokalise File Upload"
 description: "Upload file to lokalise"
+icon: "flag"
+color: "yellow"
 inputs:
   lokalise-token: # id of input
     description: "Your CLI/API token for Lokalise"
