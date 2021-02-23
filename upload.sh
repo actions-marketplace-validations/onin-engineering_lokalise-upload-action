@@ -1,3 +1,13 @@
+while getopts t:p:f:l: flag
+do
+    case "${flag}" in
+        t) lokalise_token=${OPTARG};;
+        p) lokalise_project_id=${OPTARG};;
+        f) file_path=${OPTARG};;
+        l) lang_iso=${OPTARG};;
+    esac
+done
+
 echo ${file_path}
 set -ex
 
