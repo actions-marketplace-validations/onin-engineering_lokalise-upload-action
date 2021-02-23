@@ -16,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/upload.sh -t ${{steps.lokalise-upload-action.inputs.lokalise-token}} -p ${{steps.lokalise-upload-action.inputs.lokalise-project-id }} -f ${{ steps.lokalise-upload-action.inputs.file-path }} -l ${{ steps.lokalise-upload-action.inputs.lang-iso }}
+    - run: ${{ github.action_path }}/upload.sh ${{ inputs.lokalise-token }} ${{ inputs.lokalise-project-id }} ${{ inputs.file-path }} ${{ inputs.lang-iso }}
       shell: bash
